@@ -28,37 +28,3 @@
   获取随访列表附件 get 方法 /cases/:case-id/follow-up/:follow-up-id/attachments
   删除随访列表附件 delete 方法 /cases/:case-id/follow-up/:follow-up-id/attachments
   修改随访列表附件 put 方法 /cases/:case-id/follow-up/:follow-up-id/attachments
-
-
-export const followUpAttachmentListQueryParamsSchema = followUpDeleteParamsSchema;
-export const followUpAttachmentListResponseSchema = caseAttachmentListResponseSchema;
-
-export const followUpAddAttachmentBodyParamsSchema = followUpDeleteParamsSchema;
-export const followUpAddAttachmentBodySchema = attachmentSchema;
-export const followUpAddAttachmentResponseSchema = caseAttachmentDetailResponseSchema;
-
-export const followUpDeleteAttachmentParamsSchema = followUpDeleteParamsSchema;
-export const followUpDeleteAttachmentBodySchema = caseRemoveAttachmentBodySchema;
-export const followUpDeleteAttachmentsResponseSchema = caseAttachmentDetailResponseSchema;
-
-export const followUpUpdateAttachmentBodySchema = caseUpdateAttachmentBodySchema;
-export const followUpUpdateAttachmentParamsSchema = followUpDeleteParamsSchema;
-export const followUpUpdateAttachmentsResponseSchema = caseAttachmentDetailResponseSchema;
-
-
-
-
-export type FollowUpAttachmentListQueryParams = FollowUpUpdateParams;
-export type FollowUpAttachmentListResponse = Static<typeof followUpAttachmentListResponseSchema>;
-
-export type FollowUpUpdateAttachmentParams = FollowUpUpdateParams;
-export type FollowUpUpdateAttachmentBody = CaseUpdateAttachmentBody;
-export type FollowUpUpdateAttachmentResponse = CaseUpdateAttachmentResponse;
-
-export type FollowUpDeleteAttachmentParams = FollowUpUpdateParams;
-export type FollowUpDeleteAttachmentResponse = CaseAttachmentDetailResponse;
-export type FollowUpDeleteAttachmentBoday = CaseRemoveAttachmentBody;
-
-export type FollowUpAddAttachmentParams = FollowUpUpdateParams;
-export type FollowUpAddAttachmentBody = CaseAddAttachmentBody;
-export type FollowUpAddAttachmentResponse = CaseAddAttachmentResponse;
